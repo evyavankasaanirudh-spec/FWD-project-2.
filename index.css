@@ -1,0 +1,253 @@
+/* Reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* Dark Red Gradient Background */
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+padding:20px;
+
+background:linear-gradient(135deg,#120000,#3b0000,#6b0000);
+
+animation:fadePage 1.5s ease;
+}
+
+/* Fade In Page */
+
+@keyframes fadePage{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
+/* Header */
+
+header h1{
+text-align:center;
+font-size:40px;
+color:#ff4d4d;
+margin-bottom:20px;
+position:relative;
+}
+
+/* Rotating Gear */
+
+.gear{
+display:inline-block;
+margin-left:10px;
+animation:spin 4s linear infinite;
+}
+
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+/* Navigation */
+
+nav{
+text-align:center;
+margin-bottom:30px;
+background:#260000;
+padding:10px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(255,0,0,0.4);
+}
+
+nav a{
+color:#ffcccc;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:white;
+text-shadow:0 0 10px red;
+}
+
+/* Dashboard */
+
+main h2{
+text-align:center;
+margin-bottom:20px;
+color:#ff6666;
+}
+
+/* Stats Container */
+
+.stats-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-bottom:40px;
+}
+
+/* Cards */
+
+.stat-card,
+.broadcasting-views{
+background:#2b0000;
+padding:20px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 0 15px rgba(255,0,0,0.4);
+transition:0.3s;
+
+opacity:0;
+transform:translateY(30px);
+animation:cardFade 1s forwards;
+}
+
+/* Card Fade Animation */
+
+@keyframes cardFade{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Hover Effect */
+
+.stat-card:hover,
+.broadcasting-views:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 0 25px rgba(255,0,0,0.8);
+}
+
+/* Icons */
+
+.icon{
+font-size:35px;
+margin-bottom:10px;
+}
+
+/* Numbers */
+
+.number{
+font-size:24px;
+font-weight:bold;
+color:#ff4d4d;
+}
+
+.label{
+font-size:14px;
+color:#ffcccc;
+}
+
+/* Sections */
+
+section{
+margin-bottom:40px;
+}
+
+/* Tables */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+background:#260000;
+}
+
+th,td{
+padding:10px;
+text-align:center;
+border:1px solid #800000;
+}
+
+th{
+background:#400000;
+color:#ff6666;
+}
+
+tr:hover{
+background:#330000;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+margin-top:30px;
+padding-top:10px;
+border-top:1px solid #800000;
+color:#ff9999;
+}
+
+/* Header Layout */
+
+.top-header{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+margin-bottom:20px;
+}
+
+/* Flash Sale Button */
+
+.flash-sale{
+background:linear-gradient(45deg,#ff0000,#ff4d4d);
+color:white;
+padding:8px 16px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 10px red;
+}
+
+/* Flash Animation */
+
+@keyframes flashBlink{
+
+0%{
+opacity:1;
+box-shadow:0 0 5px red;
+}
+
+100%{
+opacity:0.5;
+box-shadow:0 0 25px red;
+}
+
+}
+/* Responsive Media Queries */
+
+.flash-sale{
+    display:inline-block;
+    padding:12px 20px;
+    background:linear-gradient(45deg,#ff3c3c,#ff9900);
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:8px;
+    animation:flashSale 1s infinite;
+    box-shadow:0 0 10px rgba(255,0,0,0.7);
+}
+
+@keyframes flashSale{
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 10px red;
+    }
+    50%{
+        transform:scale(1.08);
+        box-shadow:0 0 20px yellow;
+    }
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 10px red;
+    }
+}

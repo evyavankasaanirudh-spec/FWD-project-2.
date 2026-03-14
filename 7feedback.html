@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Interest Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="7feedback.css">
+</head>
+<body>
+    <header class="text-center py-4 border-bottom border-secondary">
+        <h1 class="text-primary fw-bold">IPL Interest Form</h1>
+        <p class="text-light">Please fill out this form</p>
+    </header>
+    <div class="container text-center my-4">
+        <h2 class="text-warning">Watch IPL Highlights</h2>
+        <video width="100%" controls>
+        <source src="/public/CRICKETPROJECT/Photos/ipl.mp4.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+    </div>
+    <div class="container my-5">
+        <div class="form-container p-4">
+            <form id="iplForm">
+                <fieldset class="mb-4">
+                    <legend class="text-primary">Personal Data</legend>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control" name="firstName" placeholder="First Name" maxlength="10" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control" name="lastName" placeholder="Last Name" maxlength="10" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" name="phone" pattern="[6-9][0-9]{9}" placeholder="10 digit number" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Age</label>
+                            <input type="number" class="form-control" name="age">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="mb-4">
+                    <legend class="text-primary">Your Role in Cricket</legend>
+                    <div class="row">
+                        <div class="col-md-4 form-check">
+                            <input class="form-check-input" type="radio" name="role" value="Batsman">
+                            <label class="form-check-label">Batsman</label>
+                        </div>
+                        <div class="col-md-4 form-check">
+                            <input class="form-check-input" type="radio" name="role" value="All-Rounder">
+                            <label class="form-check-label">All-Rounder</label>
+                        </div>
+                        <div class="col-md-4 form-check">
+                            <input class="form-check-input" type="radio" name="role" value="Bowler">
+                            <label class="form-check-label">Bowler</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="mb-4">
+                    <legend class="text-primary">Favourite IPL Team</legend>
+                    <div class="row">
+                        <div class="col-6 col-md-3 form-check">
+                            <input class="form-check-input" type="checkbox" name="team" value="RCB">
+                            <label class="form-check-label">RCB</label>
+                        </div>
+                        <div class="col-6 col-md-3 form-check">
+                            <input class="form-check-input" type="checkbox" name="team" value="CSK">
+                            <label class="form-check-label">CSK</label>
+                        </div>
+                        <div class="col-6 col-md-3 form-check">
+                            <input class="form-check-input" type="checkbox" name="team" value="MI">
+                            <label class="form-check-label">MI</label>
+                        </div>
+                        <div class="col-6 col-md-3 form-check">
+                            <input class="form-check-input" type="checkbox" name="team" value="SRH">
+                            <label class="form-check-label">SRH</label>
+                        </div>
+                        <div class="col-6 col-md-3 form-check">
+                            <input class="form-check-input" type="checkbox" name="team" value="KKR">
+                            <label class="form-check-label">KKR</label>
+                        </div>
+                        <div class="col-6 col-md-3 form-check">
+                            <input class="form-check-input" type="checkbox" name="team" value="RR">
+                            <label class="form-check-label">RR</label>
+                        </div>
+                        <div class="col-6 col-md-3 form-check">
+                            <input class="form-check-input" type="checkbox" name="team" value="DC">
+                            <label class="form-check-label">DC</label>
+                        </div>
+                        <div class="col-6 col-md-3 form-check">
+                            <input class="form-check-input" type="checkbox" name="team" value="PBKS">
+                            <label class="form-check-label">PBKS</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="mb-4">
+                    <legend class="text-primary">Favourite Player</legend>
+                    <select class="form-select" name="player">
+                        <optgroup label="Batsman">
+                            <option>Virat Kohli</option>
+                            <option>Rohit Sharma</option>
+                            <option>KL Rahul</option>
+                        </optgroup>
+                        <optgroup label="Bowler">
+                            <option>Jasprit Bumrah</option>
+                            <option>Mitchell Starc</option>
+                            <option>Mohammed Siraj</option>
+                        </optgroup>
+                        <optgroup label="Keeper">
+                            <option>MS Dhoni</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <fieldset class="mb-4">
+                    <legend class="text-primary">Your Thoughts on IPL</legend>
+                    <textarea class="form-control" name="thoughts" rows="4"></textarea>
+                </fieldset>
+                <fieldset class="mb-4">
+                    <legend class="text-primary">Interest Level</legend>
+                    <input type="range" class="form-range" name="interest" min="1" max="10" value="5">
+                </fieldset>
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary px-4 me-2">Submit</button>
+                    <button type="reset" class="btn btn-danger px-4">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="text-center mt-4">
+            <a href="index.html" class="text-info">Back to Home</a>
+        </div>
+    </div>
+    <footer class="text-center py-3 border-top border-secondary">
+        <p class="mb-0">@IPL | All rights reserved.</p>
+    </footer>
+    <script src="7feedback.js"></script>
+</body>
+</html>
